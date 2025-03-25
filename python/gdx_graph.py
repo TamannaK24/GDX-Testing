@@ -57,7 +57,6 @@ class GraphWindow(QMainWindow):
         self.graph_widget.setLabel("bottom", "Time (s)")
         self.layout.addWidget(self.graph_widget)
         
-        # Start and Stop buttons
         self.start_button = QPushButton("Start Data Collection")
         self.start_button.clicked.connect(self.start_collection)
         self.layout.addWidget(self.start_button)
@@ -66,7 +65,6 @@ class GraphWindow(QMainWindow):
         self.stop_button.clicked.connect(self.stop_collection)
         self.layout.addWidget(self.stop_button)
         
-        # Table with 3 columns
         self.table = QTableWidget()
         self.table.setColumnCount(3)
         self.table.setHorizontalHeaderLabels(["Time (s)", "Time (ms)", "Force (N)"])
